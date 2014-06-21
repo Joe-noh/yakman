@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+@import 'compass';
+@import 'blueprint';
+@include global-reset;
+
+$tiles: 'man1', 'man2', 'man3', 'man4', 'man5', 'man6', 'man7', 'man8', 'man9',
+        'pin1', 'pin2', 'pin3', 'pin4', 'pin5', 'pin6', 'pin7', 'pin8', 'pin9',
+        'soh1', 'soh2', 'soh3', 'soh4', 'soh5', 'soh6', 'soh7', 'soh8', 'soh9',
+        'ton',  'nan',  'sha',  'pe',   'haku', 'hatsu', 'chun';
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #27ae60;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+}
+
+.tile-wrapper {
+  width: 6%;
+  margin: 0.55%;
+  display-inline: block;
+  position: relative;
+  float: left;
+
+  &:after {
+    padding-top: 130%;
+    display: block;
+    content: '';
+  }
+}
+
+.tile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  @include border-radius(10%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% 80%;
+  background-color: white;
+}
+
+@each $clazz in $tiles {
+  .#{$clazz} {
+    background-image: url(/images/tiles/#{$clazz}.svg);
+  }
+}
+
+.nan {
+  background-position: center bottom 80%;
+}
+.ton, .sha, .pe {
+  background-position: center bottom 60%;
+}

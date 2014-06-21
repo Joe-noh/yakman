@@ -18,6 +18,9 @@ class Yakman
   @_yakmanNames = ['大三元', '四暗刻', '國士無双', '字一色', '清老頭',
                    '九蓮宝燈', '緑一色', '大四喜', '小四喜']
 
+  @_tileOrders = {}
+  @_tileOrders[tile] = index for tile, index in @_tiles
+
   @random: ->
     name = ArrayUtils.sample(@_yakmanNames)
 
@@ -25,15 +28,19 @@ class Yakman
       when '大三元'
         numbers  = [2, 3, 3, 3, 3]
         elements = ArrayUtils.sampleSome(@_tiles, 2, @_sangenTiles).concat(@_sangenTiles)
-        ArrayUtils.zipPopulate(elements, numbers)
+        tiles = ArrayUtils.zipPopulate(elements, numbers)
+        @_sortTiles tiles
       when '四暗刻'
-        ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_tiles, 5), [2, 3, 3, 3, 3])
+        tiles = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_tiles, 5), [2, 3, 3, 3, 3])
+        @_sortTiles tiles
       when '國士無双'
         ArrayUtils.sampleAndDouble(@_yaochuTiles)
       when '字一色'
-        ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_charTiles, 5), [2, 3, 3, 3, 3])
+        tiles = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_charTiles, 5), [2, 3, 3, 3, 3])
+        @_sortTiles tiles
       when '清老頭'
-        ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_rohtohTiles, 5), [2, 3, 3, 3, 3])
+        tiles = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_rohtohTiles, 5), [2, 3, 3, 3, 3])
+        @_sortTiles tiles
       when '九蓮宝燈'
         suite   = ArrayUtils.sample ['man', 'pin', 'soh']
         numbers = [1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9]
@@ -48,27 +55,14 @@ class Yakman
 
     {name: name, tiles: tiles}
 
-  @_sampleTiles: (numTiles, excepts...) ->
-    if $.isArray(excepts) then excepts = excepts[0]
-    ## candidates = @_tiles - excepts
-    candidates = $.grep @_tiles, (tile, index) ->
-      $.inArray(tile, excepts) == -1
-
-    pickedTiles = []
-    for i in [1 .. numTiles]
-      picked = ArrayUtils.sample(candidates)
-      pickedTiles.push(picked)
-
-      candidates = ArrayUtils.remove(candidates, picked)
-
-    pickedTiles
 
   @_allGreen: ->
     numShuntsu = ArrayUtils.sample [0, 1, 2, 3]
     shuntsuPart = ArrayUtils.zipPopulate(['soh2', 'soh3', 'soh4'], ArrayUtils.populate(numShuntsu, 3))
 
     if numShuntsu == 0
-      return ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_greenTiles, 5), [2, 3, 3, 3, 3])
+      tiles = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_greenTiles, 5), [2, 3, 3, 3, 3])
+      return @_sortTiles(tiles)
 
     hatsu86 = ['hatsu', 'soh8', 'soh6']
     switch numShuntsu
@@ -83,11 +77,15 @@ class Yakman
         willBeAnko = ArrayUtils.sampleSome(hatsu86, 1, [head])
 
     ankoPart = ArrayUtils.zipPopulate(willBeAnko, [3, 3, 3])
-    ArrayUtils.populate(head, 2).concat(shuntsuPart, ankoPart)
+    @_sortTiles ArrayUtils.populate(head, 2).concat(shuntsuPart, ankoPart)
 
   @_sushi: (kazeNumbers, notKazeNumbers) ->
     notKazeTiles = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_tiles, 1, @_kazeTiles), notKazeNumbers)
     kazeTiles    = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_kazeTiles, 4), kazeNumbers)
-    notKazeTiles.concat kazeTiles
+    @_sortTiles notKazeTiles.concat(kazeTiles)
+
+  @_sortTiles: (tiles) ->
+    tiles.sort (a, b) =>
+      @_tileOrders[a] - @_tileOrders[b]
 
 @Yakman = Yakman

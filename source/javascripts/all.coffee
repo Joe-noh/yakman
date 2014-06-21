@@ -2,4 +2,6 @@
 #= require_tree .
 
 $ ->
-  $('.yakman').text Yakman.random()
+  $('.yakman').each (i) ->
+    yakman = Yakman.random()
+    $(this).text(yakman.name + yakman.tiles)

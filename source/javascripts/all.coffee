@@ -1,4 +1,5 @@
 #= require jquery
+#= require velocity/jquery.velocity.min.js
 #= require_tree .
 
 $ ->

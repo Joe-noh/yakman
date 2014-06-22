@@ -1,0 +1,19 @@
+{
+  "name": "yakman",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Joe-noh/yakman",
+  "authors": [
+    "Joe-noh <goflb.jh@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "velocity": "~0.2.1"
+  }
+}

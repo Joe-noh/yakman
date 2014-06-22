@@ -4,6 +4,30 @@
 @import 'blueprint';
 @include global-reset;
 
+//--- mixins for animation ---
+@mixin keyframes( $animationName )
+{
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @-moz-keyframes $animationName {
+        @content;
+    }
+    @-o-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
+}
+
+@mixin animation($name, $duration, $timing, $delay, $count, $direction: null) {
+  @each $prefix in '-webkit-', '-moz-', '-o-', null {
+      #{$prefix}animation: $name $duration $timing $delay $count $direction;
+  }
+}
+//----------------------------
+
 $tiles: 'man1', 'man2', 'man3', 'man4', 'man5', 'man6', 'man7', 'man8', 'man9',
         'pin1', 'pin2', 'pin3', 'pin4', 'pin5', 'pin6', 'pin7', 'pin8', 'pin9',
         'soh1', 'soh2', 'soh3', 'soh4', 'soh5', 'soh6', 'soh7', 'soh8', 'soh9',
@@ -27,11 +51,18 @@ html, body {
   display-inline: block;
   position: relative;
   float: left;
+  top: 80%;
 
   &:after {
     padding-top: 130%;
     display: block;
     content: '';
+  }
+
+  @for $i from 0 through 13 {
+      &:nth-child(#{$i+1}) {
+	  @include animation(hopping, 1s, ease, #{$i/14}s, infinite);
+      }
   }
 }
 
@@ -49,11 +80,13 @@ html, body {
   background-color: white;
 }
 
+//--- assign svgs ------------
 @each $clazz in $tiles {
   .#{$clazz} {
     background-image: url(/images/tiles/#{$clazz}.svg);
   }
 }
+//----------------------------
 
 .nan {
   background-position: center bottom 80%;
@@ -61,3 +94,23 @@ html, body {
 .ton, .sha, .pe {
   background-position: center bottom 60%;
 }
+
+//--- animations -------------
+@include keyframes(hopping) {
+    0% {
+	top: 80%;
+    }
+
+    10% {
+	top: 70%;
+    }
+
+    20% {
+	top: 80%;
+    }
+
+    100% {
+	top: 80%;
+    }
+}
+//----------------------------

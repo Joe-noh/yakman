@@ -117,7 +117,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jquery-middleman
+  jquery-middleman (~> 3.0)
   middleman (~> 3.3.3)
   middleman-livereload (~> 3.1.0)
   tzinfo-data

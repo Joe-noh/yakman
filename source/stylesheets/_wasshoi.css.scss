@@ -1,0 +1,28 @@
+
+#wasshois > div {
+  position: absolute;
+  top: 40%;
+  font-weight: bold;
+}
+
+div#wasshoi1 {
+  left: 10%;
+  @include rotate(-20deg);
+  @include animation(beating, 1s, steps(2), 0, infinite);
+}
+
+div#wasshoi2 {
+  right: 10%;
+  @include rotate(20deg);
+  @include animation(beating, 1s, steps(2), 0.5s, infinite);
+}
+
+@include keyframes(beating) {
+  from {
+    font-size: 100%;
+  }
+
+  to {
+    font-size: 400%;
+  }
+}

@@ -26,6 +26,14 @@
       #{$prefix}animation: $name $duration $timing $delay $count $direction;
   }
 }
+
+@mixin animations($params_array...) {
+  @each $prefix in '-webkit-', '-moz-', '-o-', null {
+    @each $params in $params_array {
+      #{$prefix}animation: $params;
+    }
+  }
+}
 //----------------------------
 
 $tiles: 'man1', 'man2', 'man3', 'man4', 'man5', 'man6', 'man7', 'man8', 'man9',
@@ -61,7 +69,7 @@ html, body {
 
   @for $i from 0 through 13 {
       &:nth-child(#{$i+1}) {
-	  @include animation(hopping, 1s, ease, #{$i/14}s, infinite);
+          @include animation(hopping, 1s, ease, #{$i/14}s, infinite);
       }
   }
 }
@@ -114,3 +122,5 @@ html, body {
     }
 }
 //----------------------------
+
+@import 'stick';

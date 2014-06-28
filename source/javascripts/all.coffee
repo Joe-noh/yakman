@@ -4,8 +4,13 @@
 
 $ ->
   yakman = Yakman.random()
+
   $('.tile').each (i) ->
     $(this).addClass(yakman.tiles[i])
+
+  for i in [0..yakman.name.length]
+    char = $('<div></div>').text(yakman.name[i])
+    $('#name-chars').append char
 
   do dropStick = ->
     new Stick

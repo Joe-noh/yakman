@@ -4,6 +4,8 @@ title: Yakman
 
 <div id="sticks"></div>
 
+<div id="name-chars"></div>
+
 <div id="wasshois">
   <div id="wasshoi1">わっしょい！</div>
   <div id="wasshoi2">わっしょい！</div>
@@ -17,3 +19,9 @@ title: Yakman
   <% end %>
 </div>
 
+<div id="kanji-repository">
+  <%- Dir.glob("#{root}/source/images/chars/*") do |path| %>
+    <%- id = path.split('/').last.sub('.svg', '') %>
+    <div id=<%= "kanji_#{id}"%>><%= File.read(path) %></div>
+  <% end %>
+</div>

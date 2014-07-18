@@ -11,6 +11,6 @@ class Stick
                              .css('top', '0%')
                              .css('left', "#{left}%")
     $('#sticks').append(@stick)
-    @stick.velocity({top: '90%'}, 6000, "ease-out", => @stick.remove())
+    @stick.velocity({top: '80%'}, 6000, "ease-in", => @stick.remove())
 
 @Stick = Stick

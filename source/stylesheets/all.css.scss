@@ -36,21 +36,52 @@
 }
 //----------------------------
 
+$green: #27ae60;
 $tiles: 'man1', 'man2', 'man3', 'man4', 'man5', 'man6', 'man7', 'man8', 'man9',
         'pin1', 'pin2', 'pin3', 'pin4', 'pin5', 'pin6', 'pin7', 'pin8', 'pin9',
         'soh1', 'soh2', 'soh3', 'soh4', 'soh5', 'soh6', 'soh7', 'soh8', 'soh9',
         'ton',  'nan',  'sha',  'pe',   'haku', 'hatsu', 'chun';
 
+html {
+  font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
 html, body {
   height: 100%;
   width: 100%;
-  background-color: #27ae60;
+  background-color: $green;
 }
 
 .container {
   margin: 0 auto;
   width: 80%;
   height: 100%;
+}
+
+#curtain {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+
+  #start-button {
+    position: absolute;
+    top: 60%;
+    left: 42%;
+    width: 10em;
+    height: 4em;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    background-color: $green;
+    @include border-radius;
+
+    p {
+      font-size: 100%;
+      margin-top: 1.5em;
+    }
+  }
 }
 
 .tile-wrapper {

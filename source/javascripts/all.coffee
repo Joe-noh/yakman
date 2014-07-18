@@ -3,6 +3,10 @@
 #= require_tree .
 
 $ ->
+  $('#start-button').click ->
+    $('#start-button').hide()
+    $('#curtain').velocity({height: '0'}, 1500, "ease-in", => $('#curtain').remove())
+
   yakman = Yakman.random()
 
   $('.tile').each (i) ->

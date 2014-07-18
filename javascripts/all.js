@@ -10140,10 +10140,17 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
           return chars.eq(3).css('right', '15%');
       }
     })();
-    return (dropStick = function() {
+    (dropStick = function() {
       new Stick;
       return setTimeout(dropStick, 300);
     })();
+    return $('.tile.soh1').click(function() {
+      var url;
+      url = "https://twitter.com/share?";
+      url += "text=" + encodeURI("" + yakman.name + "を和了ったよ！わっしょいわっしょい！");
+      url += "&url=" + encodeURI(window.location.href);
+      return window.open(url, "わっしょーい", "width=500,height=300");
+    });
   });
 
 }).call(this);

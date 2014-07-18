@@ -6,9 +6,31 @@
 .char {
   position: absolute;
   top: 20%;
+
+  path {
+    @include animation(rainbow, 2s, linear, 0, infinite);
+  }
 }
 
 #kanji-repository {
   height: 0;
   display: none;
+}
+
+@include keyframes(rainbow) {
+  0% {
+    fill: #ff3333;
+  }
+  25% {
+    fill: #ffcc33;
+  }
+  50% {
+    fill: #ffff33;
+  }
+  75% {
+    fill: #33ff33;
+  }
+  100% {
+    fill: #ff3333;
+  }
 }

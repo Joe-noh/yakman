@@ -1,4 +1,6 @@
 
+$stick_types: 'stick100', 'stick1000', 'stick5000', 'stick10000';
+
 #sticks {
     position: absolute;
     top: 0;
@@ -17,6 +19,17 @@
     $animations: ((fade_out 6s linear 0 1),
                   (rolling  6s linear 0 1));
     @include animations($animations);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+
+    @each $clazz in $stick_types {
+      &.#{$clazz} {
+        background-image: url(/images/sticks/#{$clazz}.svg);
+      }
+    }
 }
 
 @include keyframes(fade_out) {

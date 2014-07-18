@@ -26,9 +26,10 @@ class Yakman
 
     tiles = switch name
       when '大三元'
-        numbers  = [2, 3, 3, 3, 3]
-        elements = ArrayUtils.sampleSome(@_tiles, 2, @_sangenTiles).concat(@_sangenTiles)
+        numbers  = [2, 3, 3, 3]
+        elements = ArrayUtils.sampleSome(@_tiles, 1, @_sangenTiles).concat(@_sangenTiles)
         tiles = ArrayUtils.zipPopulate(elements, numbers)
+        tiles = @_randomShuntsu().concat(tiles)
         @_sortTiles tiles
       when '四暗刻'
         tiles = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_tiles, 5), [2, 3, 3, 3, 3])
@@ -49,9 +50,9 @@ class Yakman
       when '緑一色'
         @_allGreen()
       when '大四喜'
-        @_sushi([3, 3, 3, 3], [2])
+        @_sushi([3, 3, 3, 3], 2)
       when '小四喜'
-        @_sushi([2, 3, 3, 3], [3])
+        @_sushi([2, 3, 3, 3], 3)
 
     {name: name, tiles: tiles}
 
@@ -79,10 +80,18 @@ class Yakman
     ankoPart = ArrayUtils.zipPopulate(willBeAnko, [3, 3, 3])
     @_sortTiles ArrayUtils.populate(head, 2).concat(shuntsuPart, ankoPart)
 
-  @_sushi: (kazeNumbers, notKazeNumbers) ->
-    notKazeTiles = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_tiles, 1, @_kazeTiles), notKazeNumbers)
+  @_sushi: (kazeNumbers, notKazeNumber) ->
+    if notKazeNumber == 2
+      notKazeTiles = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_tiles, 1, @_kazeTiles), [notKazeNumber])
+    else
+      notKazeTiles = @_randomShuntsu()
     kazeTiles    = ArrayUtils.zipPopulate(ArrayUtils.sampleSome(@_kazeTiles, 4), kazeNumbers)
     @_sortTiles notKazeTiles.concat(kazeTiles)
+
+  @_randomShuntsu: ->
+    num  = ArrayUtils.sample([1, 2, 3, 4, 5, 6 ,7])
+    suit = ArrayUtils.sample(['man', 'pin', 'soh'])
+    ("#{suit}#{num+i}" for i in [0..2])
 
   @_sortTiles: (tiles) ->
     tiles.sort (a, b) =>

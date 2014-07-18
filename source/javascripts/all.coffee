@@ -42,3 +42,9 @@ $ ->
   do dropStick = ->
     new Stick
     setTimeout dropStick, 300
+
+  $('.tile.soh1').click ->
+    url  = "https://twitter.com/share?"
+    url += "text=" + encodeURI("#{yakman.name}を和了ったよ！わっしょいわっしょい！")
+    url += "&url=" + encodeURI(window.location.href)
+    window.open(url, "わっしょーい", "width=500,height=300")

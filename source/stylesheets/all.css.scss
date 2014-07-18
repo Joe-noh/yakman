@@ -42,6 +42,10 @@ $tiles: 'man1', 'man2', 'man3', 'man4', 'man5', 'man6', 'man7', 'man8', 'man9',
         'soh1', 'soh2', 'soh3', 'soh4', 'soh5', 'soh6', 'soh7', 'soh8', 'soh9',
         'ton',  'nan',  'sha',  'pe',   'haku', 'hatsu', 'chun';
 
+html {
+  font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -68,12 +72,14 @@ html, body {
     width: 10em;
     height: 4em;
     text-align: center;
+    cursor: pointer;
     color: white;
     background-color: $green;
     @include border-radius;
 
     p {
-      margin-top: 1em;
+      font-size: 100%;
+      margin-top: 1.5em;
     }
   }
 }

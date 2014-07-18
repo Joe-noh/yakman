@@ -69,6 +69,14 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  activate :asset_host, host:'/yakman'
+end
+
+activate :deploy do |d|
+  d.build_before = true
+  d.method = :git
+  d.branch = 'gh-pages'
 end
 
 after_configuration do

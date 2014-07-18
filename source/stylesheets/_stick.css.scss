@@ -27,7 +27,7 @@ $stick_types: 'stick100', 'stick1000', 'stick5000', 'stick10000';
 
     @each $clazz in $stick_types {
       &.#{$clazz} {
-        background-image: url(/images/sticks/#{$clazz}.svg);
+        background-image: url(../images/sticks/#{$clazz}.svg);
       }
     }
 }

@@ -1,0 +1,706 @@
+@charset "UTF-8";
+/* line 17, /home/jhonzawa/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, /home/jhonzawa/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, /home/jhonzawa/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, /home/jhonzawa/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, /home/jhonzawa/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, /home/jhonzawa/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, /home/jhonzawa/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, /home/jhonzawa/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, /home/jhonzawa/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 45, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+html {
+  font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
+
+/* line 49, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #27ae60; }
+
+/* line 55, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.container {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%; }
+
+/* line 61, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+#curtain {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222222; }
+  /* line 68, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  #curtain #start-button {
+    position: absolute;
+    top: 60%;
+    left: 42%;
+    width: 10em;
+    height: 4em;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    background-color: #27ae60;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; }
+    /* line 80, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+    #curtain #start-button p {
+      font-size: 100%;
+      margin-top: 1.5em; }
+
+/* line 87, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.tile-wrapper {
+  width: 6%;
+  margin: 0.55%;
+  display-inline: block;
+  position: relative;
+  float: left;
+  top: 80%; }
+  /* line 95, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:after {
+    padding-top: 130%;
+    display: block;
+    content: ''; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(1) {
+    -webkit-animation: hopping 1s ease 0s infinite;
+    -moz-animation: hopping 1s ease 0s infinite;
+    -o-animation: hopping 1s ease 0s infinite;
+    animation: hopping 1s ease 0s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(2) {
+    -webkit-animation: hopping 1s ease 0.07143s infinite;
+    -moz-animation: hopping 1s ease 0.07143s infinite;
+    -o-animation: hopping 1s ease 0.07143s infinite;
+    animation: hopping 1s ease 0.07143s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(3) {
+    -webkit-animation: hopping 1s ease 0.14286s infinite;
+    -moz-animation: hopping 1s ease 0.14286s infinite;
+    -o-animation: hopping 1s ease 0.14286s infinite;
+    animation: hopping 1s ease 0.14286s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(4) {
+    -webkit-animation: hopping 1s ease 0.21429s infinite;
+    -moz-animation: hopping 1s ease 0.21429s infinite;
+    -o-animation: hopping 1s ease 0.21429s infinite;
+    animation: hopping 1s ease 0.21429s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(5) {
+    -webkit-animation: hopping 1s ease 0.28571s infinite;
+    -moz-animation: hopping 1s ease 0.28571s infinite;
+    -o-animation: hopping 1s ease 0.28571s infinite;
+    animation: hopping 1s ease 0.28571s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(6) {
+    -webkit-animation: hopping 1s ease 0.35714s infinite;
+    -moz-animation: hopping 1s ease 0.35714s infinite;
+    -o-animation: hopping 1s ease 0.35714s infinite;
+    animation: hopping 1s ease 0.35714s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(7) {
+    -webkit-animation: hopping 1s ease 0.42857s infinite;
+    -moz-animation: hopping 1s ease 0.42857s infinite;
+    -o-animation: hopping 1s ease 0.42857s infinite;
+    animation: hopping 1s ease 0.42857s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(8) {
+    -webkit-animation: hopping 1s ease 0.5s infinite;
+    -moz-animation: hopping 1s ease 0.5s infinite;
+    -o-animation: hopping 1s ease 0.5s infinite;
+    animation: hopping 1s ease 0.5s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(9) {
+    -webkit-animation: hopping 1s ease 0.57143s infinite;
+    -moz-animation: hopping 1s ease 0.57143s infinite;
+    -o-animation: hopping 1s ease 0.57143s infinite;
+    animation: hopping 1s ease 0.57143s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(10) {
+    -webkit-animation: hopping 1s ease 0.64286s infinite;
+    -moz-animation: hopping 1s ease 0.64286s infinite;
+    -o-animation: hopping 1s ease 0.64286s infinite;
+    animation: hopping 1s ease 0.64286s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(11) {
+    -webkit-animation: hopping 1s ease 0.71429s infinite;
+    -moz-animation: hopping 1s ease 0.71429s infinite;
+    -o-animation: hopping 1s ease 0.71429s infinite;
+    animation: hopping 1s ease 0.71429s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(12) {
+    -webkit-animation: hopping 1s ease 0.78571s infinite;
+    -moz-animation: hopping 1s ease 0.78571s infinite;
+    -o-animation: hopping 1s ease 0.78571s infinite;
+    animation: hopping 1s ease 0.78571s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(13) {
+    -webkit-animation: hopping 1s ease 0.85714s infinite;
+    -moz-animation: hopping 1s ease 0.85714s infinite;
+    -o-animation: hopping 1s ease 0.85714s infinite;
+    animation: hopping 1s ease 0.85714s infinite; }
+  /* line 102, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  .tile-wrapper:nth-child(14) {
+    -webkit-animation: hopping 1s ease 0.92857s infinite;
+    -moz-animation: hopping 1s ease 0.92857s infinite;
+    -o-animation: hopping 1s ease 0.92857s infinite;
+    animation: hopping 1s ease 0.92857s infinite; }
+
+/* line 108, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.tile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  border-radius: 10%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% 80%;
+  background-color: white; }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.man1 {
+  background-image: url(/images/tiles/man1.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.man2 {
+  background-image: url(/images/tiles/man2.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.man3 {
+  background-image: url(/images/tiles/man3.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.man4 {
+  background-image: url(/images/tiles/man4.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.man5 {
+  background-image: url(/images/tiles/man5.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.man6 {
+  background-image: url(/images/tiles/man6.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.man7 {
+  background-image: url(/images/tiles/man7.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.man8 {
+  background-image: url(/images/tiles/man8.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.man9 {
+  background-image: url(/images/tiles/man9.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pin1 {
+  background-image: url(/images/tiles/pin1.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pin2 {
+  background-image: url(/images/tiles/pin2.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pin3 {
+  background-image: url(/images/tiles/pin3.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pin4 {
+  background-image: url(/images/tiles/pin4.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pin5 {
+  background-image: url(/images/tiles/pin5.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pin6 {
+  background-image: url(/images/tiles/pin6.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pin7 {
+  background-image: url(/images/tiles/pin7.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pin8 {
+  background-image: url(/images/tiles/pin8.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pin9 {
+  background-image: url(/images/tiles/pin9.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.soh1 {
+  background-image: url(/images/tiles/soh1.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.soh2 {
+  background-image: url(/images/tiles/soh2.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.soh3 {
+  background-image: url(/images/tiles/soh3.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.soh4 {
+  background-image: url(/images/tiles/soh4.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.soh5 {
+  background-image: url(/images/tiles/soh5.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.soh6 {
+  background-image: url(/images/tiles/soh6.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.soh7 {
+  background-image: url(/images/tiles/soh7.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.soh8 {
+  background-image: url(/images/tiles/soh8.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.soh9 {
+  background-image: url(/images/tiles/soh9.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.ton {
+  background-image: url(/images/tiles/ton.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.nan {
+  background-image: url(/images/tiles/nan.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.sha {
+  background-image: url(/images/tiles/sha.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.pe {
+  background-image: url(/images/tiles/pe.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.haku {
+  background-image: url(/images/tiles/haku.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.hatsu {
+  background-image: url(/images/tiles/hatsu.svg); }
+
+/* line 124, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.chun {
+  background-image: url(/images/tiles/chun.svg); }
+
+/* line 130, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.nan {
+  background-position: center bottom 80%; }
+
+/* line 133, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+.ton, .sha, .pe {
+  background-position: center bottom 60%; }
+
+@-webkit-keyframes hopping {
+  /* line 139, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  0% {
+    top: 80%; }
+
+  /* line 143, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  10% {
+    top: 70%; }
+
+  /* line 147, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  20% {
+    top: 80%; }
+
+  /* line 151, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  100% {
+    top: 80%; } }
+
+@-moz-keyframes hopping {
+  /* line 139, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  0% {
+    top: 80%; }
+
+  /* line 143, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  10% {
+    top: 70%; }
+
+  /* line 147, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  20% {
+    top: 80%; }
+
+  /* line 151, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  100% {
+    top: 80%; } }
+
+@-o-keyframes hopping {
+  /* line 139, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  0% {
+    top: 80%; }
+
+  /* line 143, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  10% {
+    top: 70%; }
+
+  /* line 147, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  20% {
+    top: 80%; }
+
+  /* line 151, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  100% {
+    top: 80%; } }
+
+@keyframes hopping {
+  /* line 139, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  0% {
+    top: 80%; }
+
+  /* line 143, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  10% {
+    top: 70%; }
+
+  /* line 147, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  20% {
+    top: 80%; }
+
+  /* line 151, /home/jhonzawa/yakman/source/stylesheets/all.css.scss */
+  100% {
+    top: 80%; } }
+
+/* line 4, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+#sticks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 12, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+.stick {
+  position: absolute;
+  width: 10%;
+  height: 1%;
+  display: block;
+  background-color: white;
+  -webkit-animation: fade_out 6s linear 0 1, rolling 6s linear 0 1;
+  -moz-animation: fade_out 6s linear 0 1, rolling 6s linear 0 1;
+  -o-animation: fade_out 6s linear 0 1, rolling 6s linear 0 1;
+  animation: fade_out 6s linear 0 1, rolling 6s linear 0 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+  /* line 29, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  .stick.stick100 {
+    background-image: url(/images/sticks/stick100.svg); }
+  /* line 29, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  .stick.stick1000 {
+    background-image: url(/images/sticks/stick1000.svg); }
+  /* line 29, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  .stick.stick5000 {
+    background-image: url(/images/sticks/stick5000.svg); }
+  /* line 29, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  .stick.stick10000 {
+    background-image: url(/images/sticks/stick10000.svg); }
+
+@-webkit-keyframes fade_out {
+  /* line 36, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  0%, 30% {
+    opacity: 1; }
+
+  /* line 40, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes fade_out {
+  /* line 36, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  0%, 30% {
+    opacity: 1; }
+
+  /* line 40, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes fade_out {
+  /* line 36, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  0%, 30% {
+    opacity: 1; }
+
+  /* line 40, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  100% {
+    opacity: 0; } }
+
+@keyframes fade_out {
+  /* line 36, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  0%, 30% {
+    opacity: 1; }
+
+  /* line 40, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes rolling {
+  /* line 46, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  100% {
+    -webkit-transform: rotate(1000deg);
+    -moz-transform: rotate(1000deg);
+    -ms-transform: rotate(1000deg);
+    -o-transform: rotate(1000deg);
+    transform: rotate(1000deg); } }
+
+@-moz-keyframes rolling {
+  /* line 46, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  100% {
+    -webkit-transform: rotate(1000deg);
+    -moz-transform: rotate(1000deg);
+    -ms-transform: rotate(1000deg);
+    -o-transform: rotate(1000deg);
+    transform: rotate(1000deg); } }
+
+@-o-keyframes rolling {
+  /* line 46, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  100% {
+    -webkit-transform: rotate(1000deg);
+    -moz-transform: rotate(1000deg);
+    -ms-transform: rotate(1000deg);
+    -o-transform: rotate(1000deg);
+    transform: rotate(1000deg); } }
+
+@keyframes rolling {
+  /* line 46, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
+  100% {
+    -webkit-transform: rotate(1000deg);
+    -moz-transform: rotate(1000deg);
+    -ms-transform: rotate(1000deg);
+    -o-transform: rotate(1000deg);
+    transform: rotate(1000deg); } }
+
+/* line 2, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+#wasshois > div {
+  position: absolute;
+  top: 50%;
+  font-weight: bold; }
+
+/* line 8, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+div#wasshoi1 {
+  left: 10%;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  -webkit-animation: beating 1s steps(2) 0 infinite;
+  -moz-animation: beating 1s steps(2) 0 infinite;
+  -o-animation: beating 1s steps(2) 0 infinite;
+  animation: beating 1s steps(2) 0 infinite; }
+
+/* line 14, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+div#wasshoi2 {
+  right: 10%;
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
+  -webkit-animation: beating 1s steps(2) 0.5s infinite;
+  -moz-animation: beating 1s steps(2) 0.5s infinite;
+  -o-animation: beating 1s steps(2) 0.5s infinite;
+  animation: beating 1s steps(2) 0.5s infinite; }
+
+@-webkit-keyframes beating {
+  /* line 21, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+  from {
+    font-size: 100%; }
+
+  /* line 25, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+  to {
+    font-size: 400%; } }
+
+@-moz-keyframes beating {
+  /* line 21, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+  from {
+    font-size: 100%; }
+
+  /* line 25, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+  to {
+    font-size: 400%; } }
+
+@-o-keyframes beating {
+  /* line 21, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+  from {
+    font-size: 100%; }
+
+  /* line 25, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+  to {
+    font-size: 400%; } }
+
+@keyframes beating {
+  /* line 21, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+  from {
+    font-size: 100%; }
+
+  /* line 25, /home/jhonzawa/yakman/source/stylesheets/_wasshoi.css.scss */
+  to {
+    font-size: 400%; } }
+
+/* line 2, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+#name-chars {
+  width: 100%; }
+
+/* line 6, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+.char {
+  position: absolute;
+  top: 20%; }
+  /* line 10, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  .char path {
+    -webkit-animation: rainbow 2s linear 0 infinite;
+    -moz-animation: rainbow 2s linear 0 infinite;
+    -o-animation: rainbow 2s linear 0 infinite;
+    animation: rainbow 2s linear 0 infinite; }
+
+/* line 15, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+#kanji-repository {
+  height: 0;
+  display: none; }
+
+@-webkit-keyframes rainbow {
+  /* line 21, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  0% {
+    fill: #ff3333; }
+
+  /* line 24, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  25% {
+    fill: #ffcc33; }
+
+  /* line 27, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  50% {
+    fill: #ffff33; }
+
+  /* line 30, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  75% {
+    fill: #33ff33; }
+
+  /* line 33, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  100% {
+    fill: #ff3333; } }
+
+@-moz-keyframes rainbow {
+  /* line 21, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  0% {
+    fill: #ff3333; }
+
+  /* line 24, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  25% {
+    fill: #ffcc33; }
+
+  /* line 27, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  50% {
+    fill: #ffff33; }
+
+  /* line 30, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  75% {
+    fill: #33ff33; }
+
+  /* line 33, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  100% {
+    fill: #ff3333; } }
+
+@-o-keyframes rainbow {
+  /* line 21, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  0% {
+    fill: #ff3333; }
+
+  /* line 24, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  25% {
+    fill: #ffcc33; }
+
+  /* line 27, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  50% {
+    fill: #ffff33; }
+
+  /* line 30, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  75% {
+    fill: #33ff33; }
+
+  /* line 33, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  100% {
+    fill: #ff3333; } }
+
+@keyframes rainbow {
+  /* line 21, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  0% {
+    fill: #ff3333; }
+
+  /* line 24, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  25% {
+    fill: #ffcc33; }
+
+  /* line 27, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  50% {
+    fill: #ffff33; }
+
+  /* line 30, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  75% {
+    fill: #33ff33; }
+
+  /* line 33, /home/jhonzawa/yakman/source/stylesheets/_kanji.css.scss */
+  100% {
+    fill: #ff3333; } }

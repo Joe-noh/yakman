@@ -450,16 +450,16 @@ html, body {
   background-size: contain; }
   /* line 29, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
   .stick.stick100 {
-    background-image: url(/images/sticks/stick100.svg); }
+    background-image: url(images/sticks/stick100.svg); }
   /* line 29, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
   .stick.stick1000 {
-    background-image: url(/images/sticks/stick1000.svg); }
+    background-image: url(images/sticks/stick1000.svg); }
   /* line 29, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
   .stick.stick5000 {
-    background-image: url(/images/sticks/stick5000.svg); }
+    background-image: url(images/sticks/stick5000.svg); }
   /* line 29, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
   .stick.stick10000 {
-    background-image: url(/images/sticks/stick10000.svg); }
+    background-image: url(images/sticks/stick10000.svg); }
 
 @-webkit-keyframes fade_out {
   /* line 36, /home/jhonzawa/yakman/source/stylesheets/_stick.css.scss */
